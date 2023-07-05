@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background-image: url(img/fondorregistrar.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .logo-card {
+      width: 40%;
+      height: 40%;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  
+    
+    .logo {
+      max-width: 5%;
+      max-height: 5%;
+    }
+    
+    .brand-text {
+      font-family: 'Courgette';
+      font-size: 100px;
+      font-size: 40px;
+      font-style: italic;
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .password-toggle {
+      position: relative;
+    }
+    
+    .password-toggle .toggle-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    
+    .password-toggle .toggle-icon i {
+      font-size: 18px;
+    }
+    /* Estilos para el formulario */
+    .form-container {
+      max-width: 500px;
+      position: center;
+      margin-top: 5%;
+      margin: 0auto;
+      padding: 20px;
+      background-color: #ffffff86;
+      border-radius: 10px;
+      padding-top: 2%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para los botones */
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+  </style>
+</head>
+<body>
+ <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="form-container">
+          <div class="card-body">
+            <img src="img/1687297823359 (1).png" alt="Logo" class="logo-card">
+            <p class="brand-text">PS Barber</p>
+            <h5 class="card-title">Iniciar sesión</h5>
+            <form action="/login/save" method="post" onsubmit="return validateForm()">
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                <small id="emailError" class="text-danger"></small>
+              </div>
+              <div class="mb-3 password-toggle">
+                <label for="password" class="form-label">Contraseña</label>
+                <div class="input-group">
+                  <input type="password" name="pass" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                  <span class="toggle-icon" onclick="togglePasswordVisibility()">
+                    <i id="passwordToggleIcon" class="far fa-eye"></i>
+                  </span>
+                </div>
+                {{#if error}}
+                <p>{{error}}</p>
+                {{/if}}
+              </div>
+              <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+              
+              <div class="mt-3">
+                <a href="/registrar" class="text-decoration-none">Registrarse</a>
+                <br>
+                <a href="/recuperarCon" class="text-decoration-none">¿Has olvidado tu contraseña?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    function validateForm() {
+      var emailInput = document.getElementById("email");
+      var emailError = document.getElementById("emailError");
+      var email = emailInput.value.trim();
+  
+      // Validar campo de correo electrónico
+      if (email === "") {
+        emailError.textContent = "Por favor, ingrese su correo electrónico.";
+        emailInput.focus();
+        return false;
+      } else if (!isValidEmail(email)) {
+        emailError.textContent = "Por favor, ingrese un correo electrónico válido.";
+        emailInput.focus();
+        return false;
+      }
+  
+      // Resto de la lógica de validación del formulario
+  
+      return true;
+    }
+  
+    function isValidEmail(email) {
+      // Expresión regular para validar el formato de correo electrónico
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailPattern.test(email);
+    }
+  
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var passwordToggleIcon = document.getElementById("passwordToggleIcon");
+      
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordToggleIcon.classList.remove("far", "fa-eye");
+        passwordToggleIcon.classList.add("far", "fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        passwordToggleIcon.classList.remove("far", "fa-eye-slash");
+        passwordToggleIcon.classList.add("far", "fa-eye");
+      }
+    }
+  </script>
+</body>
+</html>

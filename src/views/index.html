@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ps_barber</title>
+
+	<!-- css link -->
+	<link rel="stylesheet" type="text/css" href="/css/estilos.css">
+    <script src="/js/clbt.js"></script>
+	<!-- icon link -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<!-- font family -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+
+	<!-- animation link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+	<!-- header start here -->
+	<header>
+		<nav>
+			<img src="img/psb.png">
+
+			<div>
+				<a href="/login"><button href="/login" class="animate__animated animate__swing"><i class='bx bx-restaurant'></i>Login</button></a>
+			
+				<!-- ----------------------------------------------- -->
+				
+				<!-- ----------------------------------------------- -->
+				<a href="/registrar"><button href=""><i class='bx bx-restaurant'></i>REGISTRARSE</button></a>
+				<i class='bx bx-menu-alt-left' onclick="openNav()"></i>
+			</div>
+		</nav>
+
+		<div class="content">
+			<div>
+				<h3 class="sub-heading animate__animated animate__fadeInDown">PS</h3>
+				<h1 class="heading animate__animated animate__fadeInDown">BARBER ONLINE</h1>
+				<h4 class="animate__animated animate__fadeInDown">Carrera <span>68 #23-28</span></h4>
+			</div>
+		</div>
+
+		<div id="mySidenav" class="sidenav">
+			<button class="closebtn" onclick="closeNav()"><i class='bx bx-x'></i></button>
+			<a href="#">Inicio</a>
+			<a href="#cort">Cortes</a>
+			<a href="#barb">Barberos</a>
+			<a href="#loc">Local</a>
+			<a href="#cont">Contacto</a>
+		</div>
+	</header>
+	<!-- header end here -->
+
+
+	<!-- our story section start -->
+	<section class="our-story">
+		<div class="banner">
+			<h3 class="sub-heading">Nuestra</h3>
+			<h1 class="heading">Historia</h1>
+		</div>
+
+		<blockquote>“Esculpe tu imagen, redefine tu estilo: Barbería de confianza desde siempre”</blockquote>
+
+		<p>La Barbería de los Caballeros es mucho más que un simple establecimiento para cortes de cabello y afeitados. Fundada en 1965 por Don Miguel López, un hábil barbero con una pasión desbordante por su oficio, esta barbería se ha convertido en una institución icónica en la ciudad de Medellin.</p>
+
+		<p>La historia de la barbería se remonta a los humildes comienzos de Don Miguel. Desde joven, mostró un interés y un talento innato para el arte de la barbería. Aprendió los secretos del oficio de su abuelo, quien había sido barbero durante décadas. Con una habilidad excepcional y un estilo único, Don Miguel decidió abrir su propio negocio para brindar servicios de calidad a la comunidad.</p>
+	</section>
+	<!-- our story section end -->
+
+
+	<!--Catalogo -->
+<div id="cort" class="cort">
+	<section class="image-gallery">
+		<h3 class="sub-heading">Nuestros</h3>
+		<h1 class="heading">Cortes</h1>
+
+		<div class="gallery">
+			<img src="img/gal-1.jpg">
+			<img src="img/gal-2.jpg">
+			<img src="img/gal-3.jpeg">
+			<img src="img/gal-4.jpg">
+			<img src="img/gal-5.jpg">
+			<img src="img/gal-6.jpg">
+			<img src="img/gal-7.jpg">
+			<img src="img/gal-8.jpg">
+		</div>
+	</section>
+</div>
+	<!--Catalogo fin -->
+
+	<!-- our team-member section start -->
+<div class="barb" id="barb">
+	<section class="our-team">
+		<h3 class="sub-heading">Nuestros</h3>
+		<h1 class="heading">Barberos</h1>
+
+		<div class="team-member">
+			<div>
+				<img src="img/member-1.jpg">
+				<h3>Mateo Giraldo</h3>
+				<h4>BARBERO</h4>
+			</div>
+
+			<div>
+				<img src="img/member-2.jpg">
+				<h3>David Rua</h3>
+				<h4>BARBERO</h4>
+			</div>
+
+			<div>
+				<img src="img/member-3.jpg">
+				<h3>Juan Esteban</h3>
+				<h4>BARBERO</h4>
+			</div>
+		</div>
+	</section>
+</div>
+	<!-- our team-member section end -->
+
+
+	<!-- our restaurant section start -->
+<div class="loc" id="loc">
+	<section class="our-restaurant">
+		<div class="image">
+			<img src="img/intro-2.jpg">
+		</div>
+
+		<div class="content">
+			<h3>Nuestro</h3>
+			<h2>Local</h2>
+			<p>
+				CAPACIDAD<br>
+				2 Personas <br>
+				Acondicionado <br>
+				Entretenimiento <br>
+			</p>
+		</div>
+
+	</section>
+</div>
+
+	<!-- our restaurant section end -->
+
+
+	<!-- our chef section start -->
+
+	<section class="philosphy">
+		<div class="content">
+			<h3>Los Mejores</h3>
+			<h2>Estilistas</h2>
+			<p>Experiencia y conocimiento: Nuestros estilistas tienen años de experiencia en el campo de la barbería. Han perfeccionado sus habilidades a lo largo de los años, trabajando con una amplia gama de clientes y adaptándose a diferentes estilos y preferencias.</p>
+
+			<p>Están familiarizados con las técnicas más avanzadas y están al tanto de las últimas tendencias en cortes de cabello y estilos de barba.</p>
+		</div>
+
+		<div class="image">
+			<img src="img/intro-3.jpg">
+		</div>
+	</section>
+
+	<!-- our chef section end -->
+
+
+	<!-- footer section start -->
+
+	<section class="footer-section">
+		<div class="footer">
+			<div>
+				<img src="img/psb.png">
+			</div>
+
+			<div>
+				<h3>VISITANOS</h3>
+				<h4>Carrera 68 #23-28,<br> Villa Rosa. Prado,
+					<br>Medellin
+				</h4>
+			</div>
+
+			<div>
+				<h3>RESERVACION</h3>
+				<h4>343-21-22<br>Whatsapp</h4>
+			</div>
+
+			<div>
+				<h3>HORARIO</h3>
+				<h4>Lunes - Viernes 11:30am - 8pm<br>
+					Sabado - Domingo 11:30am - 4pm
+				</h4>
+			</div>
+		</div>
+<div class="cont" id="cont">
+		<!-- footer icon -->
+
+		<div class="footer-icon">
+			<ul>
+				<li><i class='bx bxl-facebook'></i></li>
+				<li><i class='bx bxl-instagram'></i></li>
+				<li><i class='bx bxl-pinterest'></i></li>
+				<li><i class='bx bxl-twitter'></i></li>
+				<li><i class='bx bxl-yelp'></i></li>
+			</ul>
+		</div>
+
+		<center>
+			&copy; Copyright PS Barber Online - Diseñada por grupo Ps_barber 
+		</center>
+	</section>
+</div>
+
+	<!-- footer section end -->
+	<!-- javascript code -->
+	<script type="text/javascript">
+		function openNav() {
+			document.getElementById('mySidenav').style.width="350px";
+		}
+
+		function closeNav() {
+			document.getElementById('mySidenav').style.width="0px";
+		}
+	</script>
+</body>
+</html>
